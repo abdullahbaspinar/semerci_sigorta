@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İsmail Semerci Sigorta</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <img src="images/logo.png" alt="İS Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#anasayfa">Anasayfa</a></li>
+          <li><a href="#teklif">Teklif Al</a></li>
+          <li><a href="#hizmetler">Hizmetler</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<section id="anasayfa" class="hero" style="position: relative; overflow: hidden; height: 100vh; display: flex; align-items: center; justify-content: center;">
+  <div class="hero-bg-fade">
+    <div class="fade-slide active" style="background-image: url('images/kaskoo.jpg');"></div>
+    <div class="fade-slide" style="background-image: url('images/saglik.jpg');"></div>
+    <div class="fade-slide" style="background-image: url('images/daskk.jpg');"></div>
+  </div>
+
+  <div class="hero-content" data-aos="fade-up" style="position: relative; z-index: 2; text-align: center; color: white;">
+    <h1>İsmail Semerci Sigorta</h1>
+    <p>Güveninizin Teminatı</p>
+    <a href="https://wa.me/905418013737?text=Merhaba%20İsmail%20Semerci%20Sigorta'dan%20teklif%20almak%20istiyorum." class="btn">Hemen Teklif Al</a>
+  </div>
+</section>
+
+
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.fade-slide');
+
+setInterval(() => {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}, 5000);
+</script>
+
+
+
+
+<section class="partners">
+  <div class="container">
+    <h2 data-aos="fade-up">Anlaşmalı Kurumlar</h2>
+    <div class="logos-slider" data-aos="fade-up">
+      <div class="logos-track">
+        <img src="images/partners_logo/AkSigorta.png" alt="AkSigorta">
+        <img src="images/partners_logo/Allianz.svg" alt="Allianz">
+        <img src="images/partners_logo/AnadoluSigorta.png" alt="Anadolu Sigorta">
+        <img src="images/partners_logo/Axa.png" alt="AXA">
+        <img src="images/partners_logo/emaasigorta.png" alt="Ema Sigorta">
+        <img src="images/partners_logo/GulfSigorta.png" alt="Gulf Sigorta">
+        <img src="images/partners_logo/HdiSigorta.png" alt="HDI Sigorta">
+        <img src="images/partners_logo/HepiyiSigorta.png" alt="Hepiyi Sigorta">
+        <img src="images/partners_logo/neova.svg" alt="Neova">
+        <img src="images/partners_logo/NipponSigorta.png" alt="Nippon Sigorta">
+        <img src="images/partners_logo/QuickSigorta.png" alt="Quick Sigorta">
+        <img src="images/partners_logo/SompoSigorta.png" alt="Sompo Sigorta">
+        <img src="images/partners_logo/TürkiyeSigorta.png" alt="Türkiye Sigorta">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="teklif" class="cta">
+    <div class="container" data-aos="zoom-in">
+      <h2>Hemen WhatsApp Üzerinden Teklif Alın</h2>
+      <a href="https://wa.me/90XXXXXXXXXX?text=Merhaba%20İsmail%20Semerci%20Sigorta'dan%20teklif%20almak%20istiyorum." class="btn">WhatsApp'tan Yaz</a>
+    </div>
+  </section>
+
+
+
+<section id="hizmetler" class="services">
+  <div class="container">
+    <h2 data-aos="fade-up">Hizmetlerimiz</h2>
+    <div class="service-boxes">
+      <div class="service" data-aos="fade-right">
+        <img src="images/icons/kasko-icon.png" alt="Kasko">
+        <h3>Kasko Sigortası</h3>
+        <p>Aracınızı çalınmaya, kazalara ve doğal afetlere karşı güvence altına alın. Kasko sigortasıyla kendinizi güvende hissedin.</p>
+      </div>
+      <div class="service" data-aos="fade-up">
+        <img src="images/icons/trafik-icon.png" alt="Trafik">
+        <h3>Trafik Sigortası</h3>
+        <p>Zorunlu trafik sigortası ile olası kazalarda karşı tarafın zararlarını teminat altına alın. Uygun fiyatlı teklifler için hemen ulaşın.</p>
+      </div>
+      <div class="service" data-aos="fade-left">
+        <img src="images/icons/dask-icon.png" alt="DASK">
+        <h3>DASK & Konut</h3>
+        <p>Deprem ve diğer doğal afetler karşısında evinizi güvence altına alın. DASK ve konut sigortası ile geleceğinizi koruyun.</p>
+      </div>
+      <div class="service" data-aos="fade-right">
+        <img src="images/icons/saglik-icon.png" alt="Sağlık">
+        <h3>Sağlık Sigortası</h3>
+        <p>Beklenmeyen sağlık sorunlarında maddi yükten korunmak için özel sağlık sigortası seçeneklerimizle tanışın.</p>
+      </div>
+      <div class="service" data-aos="fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/1159/1159644.png" alt="Seyahat">
+        <h3>Seyahat Sigortası</h3>
+        <p>Seyahatlerinizde başınıza gelebilecek her türlü riske karşı koruma sağlayan seyahat sigortasıyla güvende olun.</p>
+      </div>
+      <div class="service" data-aos="fade-left">
+        <img src="images/icons/isyeri-icon.png" alt="İşyeri">
+        <h3>İşyeri Sigortası</h3>
+        <p>İş yerinizi yangın, hırsızlık ve doğal afetlere karşı güvence altına alarak ticaret hayatınızı koruyun.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="iletisim" class="contact">
+  <div class="container">
+    <h2 data-aos="fade-up">İletişim</h2>
+    <p data-aos="fade-up">Adres: İnönü, 40. Sk. No:20, 37150 Kastamonu Merkez/Kastamonu</p>
+    <p data-aos="fade-up">Telefon: 0 (541) 801 37 37</p>
+    <p data-aos="fade-up">E-posta: ismail@semercisigorta.com</p>
+    <div data-aos="fade-up" style="margin-top: 2rem;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.0238275224388!2d33.7824599!3d41.3952889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4084fa13203cc4e9%3A0xddb58f6bf0de8520!2s%C4%B0smail%20Semerci%20Sigorta%20Acenteli%C4%9Fi!5e0!3m2!1str!2str!4v1748607332176!5m2!1str!2str"
+        width="100%"
+        height="300"
+        style="border:0; border-radius: 10px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+ 
+
+  <footer>
+    <p>&copy; 2025 İsmail Semerci Sigorta | Tüm Hakları Saklıdır</p>
+  </footer>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
