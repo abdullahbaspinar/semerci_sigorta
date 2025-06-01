@@ -6,6 +6,7 @@
   <title>İsmail Semerci Sigorta</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,20 +14,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <img src="images/logo.png" alt="İS Logo" class="logo">
-      <nav>
-        <ul>
-          <li><a href="#anasayfa">Anasayfa</a></li>
-          <li><a href="#teklif">Teklif Al</a></li>
-          <li><a href="#hizmetler">Hizmetler</a></li>
-          <li><a href="#iletisim">İletişim</a></li>
-          
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="navbar">
+  <div class="container nav-container">
+    <img src="images/logo.png" alt="İS Logo" class="logo">
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <nav id="nav-menu" class="nav-links">
+      <ul>
+        <li><a href="#anasayfa">Anasayfa</a></li>
+        <li><a href="#teklif">Teklif Al</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
 <section id="anasayfa" class="hero" style="position: relative; overflow: hidden; height: 100vh; display: flex; align-items: center; justify-content: center;">
   <div class="hero-bg-fade">
@@ -38,7 +44,7 @@
   <div class="hero-content" data-aos="fade-up" style="position: relative; z-index: 2; text-align: center; color: white;">
     <h1>İsmail Semerci Sigorta Acenteliği</h1>
     <p>Güveninizin Teminatı</p>
-    <a href="https://wa.me/905418013737?text=Merhaba%20İsmail%20Semerci%20Sigorta'dan%20teklif%20almak%20istiyorum." class="btn">Hemen Teklif Al</a>
+      <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
   </div>
 </section>
 
@@ -84,49 +90,98 @@ setInterval(() => {
   <section id="teklif" class="cta">
     <div class="container" data-aos="zoom-in">
       <h2>Hemen WhatsApp Üzerinden Teklif Alın</h2>
-      <a href="https://wa.me/90XXXXXXXXXX?text=Merhaba%20İsmail%20Semerci%20Sigorta'dan%20teklif%20almak%20istiyorum." class="btn">WhatsApp'tan Yaz</a>
+        <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
     </div>
   </section>
 
 
 
-<section id="hizmetler" class="services">
+<section id="hizmetler" class="services py-5">
   <div class="container">
-    <h2 data-aos="fade-up">Hizmetlerimiz</h2>
-    <div class="service-boxes">
-      <div class="service" data-aos="fade-right">
-        <i class="bi bi-car-front"></i>
-        <h3>Kasko Sigortası</h3>
-        <p>Aracınızı çalınmaya, kazalara ve doğal afetlere karşı güvence altına alın. Kasko sigortasıyla kendinizi güvende hissedin.</p>
+    <h2 class="text-center mb-5" data-aos="fade-up">Hizmetlerimiz</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 service-boxes">
+
+      <div class="col" data-aos="fade-right">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-car-front display-4 mb-3"></i>
+          <h3>Kasko Sigortası</h3>
+          <p>Aracınızı çalınmaya, kazalara ve doğal afetlere karşı güvence altına alın. Kasko sigortasıyla kendinizi güvende hissedin.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
       </div>
-      <div class="service" data-aos="fade-up">
-        <i class="bi bi-car-front"></i>
-        <h3>Trafik Sigortası</h3>
-        <p>Zorunlu trafik sigortası ile olası kazalarda karşı tarafın zararlarını teminat altına alın. Uygun fiyatlı teklifler için hemen ulaşın.</p>
+
+      <div class="col" data-aos="fade-up">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-car-front display-4 mb-3"></i>
+          <h3>Trafik Sigortası</h3>
+          <p>Zorunlu trafik sigortası ile olası kazalarda karşı tarafın zararlarını teminat altına alın. Uygun fiyatlı teklifler için hemen ulaşın.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
       </div>
-      <div class="service" data-aos="fade-left">
-        <i class="bi bi-house-heart"></i>
-        <h3>DASK & Konut</h3>
-        <p>Deprem ve diğer doğal afetler karşısında evinizi güvence altına alın. DASK ve konut sigortası ile geleceğinizi koruyun.</p>
+
+      <div class="col" data-aos="fade-left">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-house-door display-4 mb-3"></i>
+          <h3>Konut Sigortası</h3>
+          <p>Ev ve eşyalarınızı yangın, hırsızlık gibi risklere karşı koruyun. Konut sigortasıyla yaşam alanınızı güvence altına alın.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
       </div>
-      <div class="service" data-aos="fade-right">
-        <i class="bi bi-heart-pulse"></i>
-        <h3>Sağlık Sigortası</h3>
-        <p>Beklenmeyen sağlık sorunlarında maddi yükten korunmak için özel sağlık sigortası seçeneklerimizle tanışın.</p>
+
+      <div class="col" data-aos="fade-right">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-houses display-4 mb-3"></i>
+          <h3>DASK</h3>
+          <p>Deprem sonucu oluşabilecek maddi hasarlara karşı zorunlu deprem sigortası ile evinizi teminat altına alın.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
       </div>
-      <div class="service" data-aos="fade-up">
-        <i class="bi bi-airplane"></i>
-        <h3>Seyahat Sigortası</h3>
-        <p>Seyahatlerinizde başınıza gelebilecek her türlü riske karşı koruma sağlayan seyahat sigortasıyla güvende olun.</p>
+
+      <div class="col" data-aos="fade-up">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-heart-pulse display-4 mb-3"></i>
+          <h3>Seyahat & Sağlık Sigortası</h3>
+          <p>Seyahatlerinizde oluşabilecek sağlık sorunları veya acil durumlara karşı maddi güvence sağlayın. Hem seyahat hem sağlık sigortasını bir arada sunuyoruz.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
       </div>
-      <div class="service" data-aos="fade-left">
-        <i class="bi bi-building"></i>
-        <h3>İşyeri Sigortası</h3>
-        <p>İş yerinizi yangın, hırsızlık ve doğal afetlere karşı güvence altına alarak ticaret hayatınızı koruyun.</p>
+
+      <div class="col" data-aos="fade-left">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-building display-4 mb-3"></i>
+          <h3>İşyeri Sigortası</h3>
+          <p>İş yerinizi yangın, hırsızlık ve doğal afetlere karşı güvence altına alarak ticaret hayatınızı koruyun.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
       </div>
+
+      <div class="col" data-aos="fade-up">
+        <div class="service text-center p-4 border rounded d-flex flex-column h-100">
+          <i class="bi bi-shield-check display-4 mb-3"></i>
+          <h3>İMM Sigortası</h3>
+          <p>İhtiyari Mali Mesuliyet sigortası, zorunlu trafik sigortasının teminat limitlerini aşan zararları güvence altına alır. Ekstra koruma sağlar.</p>
+          <div class="mt-auto">
+            <a href="https://wa.me/905418013737?text=Merhaba,%20İhtiyacım%20olan%20Sigorta%20Ürünü%20için%20Bilgi,Destek%20ve%20Teklif%20Almak%20İstiyorum." class="btn">Teklif Al</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 
 <section id="iletisim" class="contact">
@@ -160,6 +215,11 @@ setInterval(() => {
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script>
     AOS.init();
+
+  function toggleMenu() {
+    document.querySelector('.navbar nav').classList.toggle('show');
+  }
+
   </script>
 </body>
 </html>

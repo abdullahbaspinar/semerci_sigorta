@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -8,7 +6,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -22,16 +19,32 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .navbar .logo {
   height: 50px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #0D3C6B;
+  cursor: pointer;
+}
+
+.navbar nav {
+  display: flex;
+}
+
 .navbar nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar nav ul li a {
@@ -45,7 +58,6 @@ body {
   color: #D62828;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -89,7 +101,6 @@ body {
   width: 300px;
 }
 
-/* Hizmetler */
 .services {
   padding: 5rem 2rem;
   background-color: #f9f9f9;
@@ -105,8 +116,8 @@ body {
 .service-boxes {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
+  justify-content: center;
 }
 
 .service {
@@ -115,11 +126,13 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 2rem;
   width: 250px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
 .service:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
 
 .service img {
@@ -127,7 +140,12 @@ body {
   margin-bottom: 1rem;
 }
 
-/* İletişim */
+.service p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
 .contact {
   padding: 4rem 2rem;
   text-align: center;
@@ -139,7 +157,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* CTA */
 .cta {
   background-color: #0D3C6B;
   color: white;
@@ -152,7 +169,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Footer */
 footer {
   background-color: #f0f0f0;
   text-align: center;
@@ -160,7 +176,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Anlaşmalı Kurumlar */
 .partners {
   background-color: #f9f9f9;
   padding: 4rem 2rem;
@@ -200,15 +215,32 @@ footer {
   100% { transform: translateX(-50%); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .navbar .container {
-    flex-direction: column;
+  .menu-toggle {
+    display: block;
   }
 
-  .service-boxes {
+  .navbar nav {
+    width: 100%;
+    display: none;
+  }
+
+  .navbar nav.show {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar .container {
+    align-items: flex-start;
   }
 
   .hero-content h1 {
@@ -221,6 +253,11 @@ footer {
 
   .logos-track {
     gap: 2rem;
+  }
+
+  .service-boxes {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -243,35 +280,39 @@ footer {
 .fade-slide.active {
   opacity: 0.4;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
 .service {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 2rem;
-  width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-}
-
-.service:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
-}
-
-.service img {
-  height: 60px;
-  margin-bottom: 1rem;
-}
-
-.service p {
-  font-size: 0.9rem;
-  color: #444;
-  margin-top: 0.5rem;
-}
-
-.service-boxes {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  flex-direction: column;
+  height: 100%;
 }
+
+.service .mt-auto {
+  margin-top: auto;
+}
+.btn {
+  background-color: #D62828;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a81f1f;
+}
+
