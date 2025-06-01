@@ -128,6 +128,12 @@ body {
   width: 250px;
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
+   display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.service .mt-auto {
+  margin-top: auto;
 }
 
 .service:hover {
@@ -301,18 +307,19 @@ html, body {
   margin-top: auto;
 }
 .btn {
-  background-color: #D62828;
+  background-color: #25D366; /* WhatsApp yeşili */
   color: white;
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
-  font-weight: 500;
-  display: inline-block;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
 }
 
 .btn:hover {
-  background-color: #a81f1f;
+  background-color: #1ebe5d; /* Hover rengi - biraz koyusu */
 }
+
 
