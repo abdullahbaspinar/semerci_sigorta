@@ -307,7 +307,23 @@ html, body {
   margin-top: auto;
 }
 .btn {
-  background-color: #25D366; /* WhatsApp yeşili */
+  background-color: #E11F27; 
+  color: white;
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #1ebe5d; 
+}
+.btn-banner {
+  background-color: #E11F27; 
   color: white;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -318,8 +334,9 @@ html, body {
   display: inline-block;
 }
 
-.btn:hover {
-  background-color: #1ebe5d; /* Hover rengi - biraz koyusu */
+.btn-banner:hover {
+  background-color: #1ebe5d; 
 }
+
 
 
